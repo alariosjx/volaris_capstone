@@ -13,8 +13,8 @@
     --white:    #ffffff;
     --orange:   #a12985;   /* Volaris brand purple */
     --vol-red:  #a12985;
-    --viv-ora:  #e8820a;
-    --ovl-dark: #5a0a4a;
+    --viv-ora:  #016928;
+    --ovl-dark: #ea8b01;
     --col-w:    700px;
   }
   
@@ -512,6 +512,41 @@
   .footer-credits strong {
     font-weight: 500;
     color: var(--gray-70);
+  }
+  
+  /* ---- MAP FILTER ---- */
+  #filter-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.75rem 0 0.5rem;
+  }
+  
+  #filter-container label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-50);
+  }
+  
+  #route-filter {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--gray-90);
+    background: var(--white);
+    border: 1px solid var(--gray-30);
+    padding: 0.3rem 0.6rem;
+    border-radius: 2px;
+    cursor: pointer;
+    appearance: auto;
+  }
+  
+  #route-filter:focus {
+    outline: 2px solid var(--orange);
+    outline-offset: 1px;
   }
   
   /* ---- MARKET SHARE CHART ---- */

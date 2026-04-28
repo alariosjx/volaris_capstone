@@ -63,7 +63,6 @@
     <!-- ARTICLE BODY -->
     <article class="article-body">
       <div class="article-col">
-
         <!-- NUT GRAPH BOX -->
         <div class="nut-box">
           <div class="nut-box-label">Key Takeaways</div>
@@ -203,10 +202,10 @@
           <div class="chart-header">
             <h3>Profits Flying High During the Pandemic</h3>
             <p class="chart-deck">
-              Volaris had a higher operating profit through most of the
-              COVID-19 pandemic when compared to peer airlines. They had a
-              large dip in 2021 because of more debt being acquired due to
-              deferrals in payments on equipment and staff. (Source: Bloomberg)
+              Volaris had a higher operating profit through most of the COVID-19
+              pandemic when compared to peer airlines. They had a large dip in
+              2021 because of more debt being acquired due to deferrals in
+              payments on equipment and staff. (Source: Bloomberg)
             </p>
           </div>
           <div class="chart-img-wrap">
@@ -223,32 +222,38 @@
 
         <p>
           By the end of 2025, Volaris held about a third of the domestic market
-          share alongside Viva and legacy carrier Aeromexico. From 2020 to
-          2024, Volaris grew its total route count from roughly 187 to more
-          than 225. The airline has almost doubled its fleet size from 86 at
-          the start of 2020 to 155 by the end of 2025 through buying new planes
-          and leasing, marking a calculated effort by management to expand.
+          share alongside Viva and legacy carrier Aeromexico. From 2020 to 2024,
+          Volaris grew its total route count from roughly 187 to more than 225.
+          The airline has almost doubled its fleet size from 86 at the start of
+          2020 to 155 by the end of 2025 through buying new planes and leasing,
+          marking a calculated effort by management to expand.
         </p>
 
         <!-- CHART: Market share (JS-generated from INM data) -->
         <div class="chart-block">
           <div class="chart-header">
-            <h3>Together, Volaris and Viva Would Hold Over 70% of Mexico's Domestic Market</h3>
+            <h3>
+              Together, Volaris and Viva Would Hold Over 70% of Mexico's
+              Domestic Market
+            </h3>
             <p class="chart-deck">
-              Share of passengers carried by airline, December 2025.
-              Source: <a href ="https://www.gob.mx/afac/acciones-y-programas/estadistica-mensual-por-aerolinea-monthly-airline-statistics"><i>Instituto Nacional de Migración</i> </a>
+              Share of passengers carried by airline, December 2025. Source:
+              <a
+                href="https://www.gob.mx/afac/acciones-y-programas/estadistica-mensual-por-aerolinea-monthly-airline-statistics"
+                ><i>Instituto Nacional de Migración</i>
+              </a>
             </p>
           </div>
           <div id="marketshare-viz"></div>
         </div>
 
         <p>
-          The airline's stock declined from a high of 22.84 per share in 2021
-          to 9.39 per share in 2025. Its stock has remained at 7.68 - even
-          after positive reactions from shareholders following merger
-          milestones. The performance gap shows how the airline has faced
-          stunted growth. Delta and United have each received and surpassed
-          their pre-pandemic stock valuations.
+          The airline's stock declined from a high of 22.84 per share in 2021 to
+          9.39 per share in 2025. Its stock has remained at 7.68 - even after
+          positive reactions from shareholders following merger milestones. The
+          performance gap shows how the airline has faced stunted growth. Delta
+          and United have each received and surpassed their pre-pandemic stock
+          valuations.
         </p>
 
         <h2>Volaris's New Approach</h2>
@@ -275,20 +280,19 @@
             this is an adjustment period that will likely stabilize in the
             near-term."
           </p>
-          <cite>Enrique Beltranena, Volaris CEO, February 2025 analyst call</cite>
+          <cite
+            >Enrique Beltranena, Volaris CEO, February 2025 analyst call</cite
+          >
         </blockquote>
-
-
 
         <!-- CHART SLOT 4: Load factor -->
         <div class="chart-block">
           <div class="chart-header">
             <h3>Turbulent Times for Passengers Carried</h3>
             <p class="chart-deck">
-              Volaris sported an average of 82% before the re-election of
-              Donald Trump, but less than a year after taking office, the
-              airline saw fewer passengers flying internationally.
-              (Source: Bloomberg)
+              Volaris sported an average of 82% before the re-election of Donald
+              Trump, but less than a year after taking office, the airline saw
+              fewer passengers flying internationally. (Source: Bloomberg)
             </p>
           </div>
           <div class="chart-img-wrap">
@@ -315,10 +319,10 @@
           <p>
             "Both companies have been competitors for many years, and events
             such as Covid, FAA downgrade to category 2 and P&amp;W engines
-            recall justify, in our view, a thorough re-assessment of the
-            optimal structure for both. We think that, if approved, the market
-            would become even more disciplined, which should also be positive
-            for Aeroméxico, while less so for Mexican airport operators."
+            recall justify, in our view, a thorough re-assessment of the optimal
+            structure for both. We think that, if approved, the market would
+            become even more disciplined, which should also be positive for
+            Aeroméxico, while less so for Mexican airport operators."
           </p>
           <cite>Pablo Monsivais, Barclays analyst</cite>
         </blockquote>
@@ -342,7 +346,10 @@
             investment, making them compelling opportunities for disciplined
             network expansion and sustainable profitability."
           </p>
-          <cite>Holger Blankenstein, Volaris Executive VP, February 2026 earnings call</cite>
+          <cite
+            >Holger Blankenstein, Volaris Executive VP, February 2026 earnings
+            call</cite
+          >
         </blockquote>
 
         <p>
@@ -383,10 +390,27 @@
             </p>
           </div>
           <div id="route-map-container"></div>
+          <div id="filter-container">
+            <label for="route-filter">Filter Routes:</label>
+            <select id="route-filter">
+              <option value="all">All</option>
+              <option value="volaris">Volaris</option>
+              <option value="viva">Viva</option>
+              <option value="overlap">Overlap</option>
+            </select>
+          </div>
           <div class="map-legend">
-            <span class="leg-item"><span class="map-line-sample vol-line"></span>Volaris routes</span>
-            <span class="leg-item"><span class="map-line-sample viv-line"></span>Viva routes</span>
-            <span class="leg-item"><span class="map-line-sample ovl-line"></span>Competing routes</span>
+            <span class="leg-item"
+              ><span class="map-line-sample vol-line"></span>Volaris
+              routes</span
+            >
+            <span class="leg-item"
+              ><span class="map-line-sample viv-line"></span>Viva routes</span
+            >
+            <span class="leg-item"
+              ><span class="map-line-sample ovl-line"></span>Competing
+              routes</span
+            >
           </div>
         </div>
 
@@ -455,9 +479,15 @@
           </div>
           <div class="fleet-viz" id="fleet-viz"></div>
           <div class="fleet-legend">
-            <span class="leg-item"><span class="leg-swatch vol"></span>Volaris — 155</span>
-            <span class="leg-item"><span class="leg-swatch viv"></span>Viva — 96</span>
-            <span class="leg-item"><span class="leg-swatch com"></span>Combined — 251</span>
+            <span class="leg-item"
+              ><span class="leg-swatch vol"></span>Volaris — 155</span
+            >
+            <span class="leg-item"
+              ><span class="leg-swatch viv"></span>Viva — 96</span
+            >
+            <span class="leg-item"
+              ><span class="leg-swatch com"></span>Combined — 251</span
+            >
           </div>
         </div>
 
@@ -475,8 +505,8 @@
           Oakland, not San Francisco. We work hard for our money, but we don't
           want to be priced out."
         </p>
-
-      </div><!-- .article-col -->
+      </div>
+      <!-- .article-col -->
     </article>
 
     <!-- FOOTER -->
@@ -485,10 +515,15 @@
         <div class="footer-rule"></div>
         <p class="footer-credits">
           Reporting by <strong>Andres Jimenez Larios</strong>. Sources include
-          Volaris investor relations, merger proxy filings submitted to the Bolsa Mexicana de Valores, Bloomberg News and Terminal data, and interviews conducted at
-          Oakland International Airport and San Jose International Airport in
-          Feb-April 2026.<br>
-          Special thanks to my instructor and editor <strong> Tom Stephen Giles</strong> for the support and assistance. Also thanks to the following people for their insights and feedback: <strong>Matt Winkler</strong>, <strong>Shin Pei</strong>, <strong>Tom Contiliano</strong>, and <strong>my classmates</strong>.
+          Volaris investor relations, merger proxy filings submitted to the
+          Bolsa Mexicana de Valores, Bloomberg News and Terminal data, and
+          interviews conducted at Oakland International Airport and San Jose
+          International Airport in Feb-April 2026.<br />
+          Special thanks to my instructor and editor
+          <strong> Tom Stephen Giles</strong> for the support and assistance.
+          Also thanks to the following people for their insights and feedback:
+          <strong>Matt Winkler</strong>, <strong>Shin Pei</strong>,
+          <strong>Tom Contiliano</strong>, and <strong>my classmates</strong>.
         </p>
       </div>
     </footer>
