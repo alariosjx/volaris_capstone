@@ -14,7 +14,7 @@ const MARKET_DATA = {
   international: [
     { airline: "Aeroméxico", share: 34.2, color: "#003DA5" },
     { airline: "Volaris", share: 28.6, color: "#a12985" },
-    { airline: "Viva", share: 14.9, color: "#02af42" },
+    { airline: "Viva", share: 14.9, color: "#e8820a" },
     { airline: "Other", share: 22.3, color: "#c8c2b8" },
   ],
 };
@@ -58,6 +58,7 @@ function buildMarketShare() {
           </div>
         </div>
       </div>
+      <div class="ms-source">Source: AFAC Resumen Estadístico Diciembre 2025 (INM)</div>
     `;
 
   renderBars("ms-domestic", MARKET_DATA.domestic);
@@ -81,22 +82,14 @@ function renderBars(containerId, data) {
     el.appendChild(row);
   });
 
-  // Animate bars on scroll
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].isIntersecting) {
-        el.querySelectorAll(".ms-bar-fill").forEach((bar, i) => {
-          setTimeout(() => {
-            bar.style.width = bar.dataset.share + "%";
-          }, i * 120);
-        });
-        observer.disconnect();
-      }
-    },
-    { threshold: 0.2 }
-  );
-
-  observer.observe(el);
+  // Animate bars in after a short paint delay
+  setTimeout(() => {
+    el.querySelectorAll(".ms-bar-fill").forEach((bar, i) => {
+      setTimeout(() => {
+        bar.style.width = bar.dataset.share + "%";
+      }, i * 120);
+    });
+  }, 100);
 }
 
 document.addEventListener("DOMContentLoaded", buildMarketShare);
